@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+echo "Running git pre-commit hook"
+
+EXCLUDED_BRANCH="main"
+
+BRANCH_NAME=$(git symbolic-ref --short HEAD 2>/dev/null)
+
+if [ "$BRANCH_NAME" = "main" || "$BRANCH_NAME" = "dev" ]; then
+    echo "Skipping pre-commit hook on branch: $EXCLUDED_BRANCH"
+    echo "Running lint-staged"
+    npx lint-staged
+    exit 0 # Exit without performing any actions
+fi
+
+echo "Running lint-staged"
+npx lint-staged
