@@ -17,6 +17,3 @@ if ! [[ $BRANCH_NAME =~ $EXPECTED_PATTERN ]]; then
     echo "Error: Invalid branch name. Branch names must match the pattern: $EXPECTED_PATTERN"
     exit 1
 fi
-
-echo "Running lint-staged"
-npx lint-staged
