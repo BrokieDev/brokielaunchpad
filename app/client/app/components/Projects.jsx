@@ -30,9 +30,11 @@ function Projects() {
             <p className='text-white mt-2 md:mt-1 ml-10'>
             Apply Now below and we will get on a call to discuss . 
             </p>
+            <a target='_blank' href="https://forms.gle/piurTz3HTt5B5MDZ9">
             <button className='bg-customBlue text-white px-16 md:px-48 py-3 rounded-lg mt-4 font-bold'>
               Apply Now!!!
             </button>
+            </a>
           </div>
         </div>
       </div>
@@ -60,9 +62,11 @@ function Projects() {
             <p className='text-white mt-2 md:mt-1'>
             Apply Now below and we will get on a call to discuss . 
             </p>
+            <a target='_blank' href="https://forms.gle/piurTz3HTt5B5MDZ9">
             <button className='bg-customBlue text-white px-16 md:px-48 py-3 rounded-lg mt-4 font-bold'>
               Apply Now!!!
             </button>
+            </a>
           </div>
         </div>
       </div>
