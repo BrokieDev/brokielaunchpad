@@ -26,10 +26,12 @@ const AppBar = () => {
       )}
 
       <ul className={openDrawer ? styles.openMenu : styles.closeMenu}>
-        <li className={styles.loginWrapper}>
-            <Link href="">Login</Link>
+        <li className={styles.authItemWrapper}>
+          <Link href="">Login</Link>
+          <span className={styles.divider}>||</span>
+          <Link href="">Register</Link>
         </li>
-        
+
         {navItems.map((item: TNavItems) => (
           <li className={styles.navItem} key={item.title}>
             <Link href="#">{item.title}</Link>
