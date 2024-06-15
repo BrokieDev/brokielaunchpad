@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #12141D;
+}
+
+main{
+    position: relative;
+
+}
+
+.top_right_gradient{
+    height: 100vh;
+    position: absolute;
+    width: 5%;
+    background-image: linear-gradient(#085364, #1845A300);
+    filter: blur(30px);
+    top: 0;
+    right: 0;
+    border-top-left-radius: 100px; 
+    border-bottom-left-radius: 100px; 
+
+}
+
+.top_left_gradient {
+    height: 50vh;
+    position: absolute;
+    width: 5%;
+    background-image: linear-gradient(#085364, #1845A300);
+    filter: blur(30px);
+    top: 0;
+    left: 0;
+    border-top-right-radius: 100px; 
+    border-bottom-right-radius: 100px; 
+}
+

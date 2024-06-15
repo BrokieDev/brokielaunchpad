@@ -1,0 +1,68 @@
+.navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbarLeft {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbarRight {
+    width: 30%;
+    background-color: indigo;
+}
+
+.navbarItems {
+    width: 80%;
+}
+
+.navbarItems ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbarItems ul li {
+    list-style-type: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbarItems ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.navbarItems ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px; 
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #FF8A00, #D0A713);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbarItems ul li a:hover::after {
+    opacity: 1;
+}
+
+.navbarItems ul li a:hover {
+    background: -webkit-linear-gradient(#FF8A00, #D0A713);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+}
