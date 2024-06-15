@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
 }
 body{
     background-color: #12141D;
@@ -18,7 +20,7 @@ main{
     width: 5%;
     background-image: linear-gradient(#085364, #1845A300);
     filter: blur(30px);
-    top: 0;
+    top: 5em;
     right: 0;
     border-top-left-radius: 100px; 
     border-bottom-left-radius: 100px; 

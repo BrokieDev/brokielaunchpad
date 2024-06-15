@@ -14,7 +14,6 @@
 
 .navbarRight {
     width: 30%;
-    background-color: indigo;
 }
 
 .navbarItems {
@@ -65,4 +64,24 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent; 
+}
+
+.navbarRight{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.login{
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.icon{
+    width: 1.25rem;
+    margin-right: 2em;
+    height: 1.25rem;
+    cursor: pointer;
+
 }

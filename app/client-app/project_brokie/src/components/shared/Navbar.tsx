@@ -5,6 +5,8 @@ import logo from '@/assets/logo/logo.png';
 import { navItems } from '@/services/constant';
 import { TNavItems } from '@/types/tConstant';
 import Link from 'next/link';
+import ringIcon from '@/assets/icons/ring.png'
+import searchIcon from '@/assets/icons/search.png'
 
 const Navbar = () => {
   return (
@@ -26,7 +28,25 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <div className={styles.navbarRight}></div>
+      <div className={styles.navbarRight}>
+        <Image
+          src={ringIcon}
+          alt="bell_icon"
+          width={12}
+          height={16}
+          className={styles.icon}
+        ></Image>
+        <Image
+          src={searchIcon}
+          alt="search_icon"
+          width={12}
+          height={16}
+          className={styles.icon}
+        ></Image>
+        <Link className={styles.login} href="">
+          Login
+        </Link>
+      </div>
     </div>
   );
 };
