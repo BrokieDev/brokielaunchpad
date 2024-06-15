@@ -1,0 +1,76 @@
+.appBar {
+    height: 80px;
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.icon {
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.openMenu {
+    background-color: #2C2C2C;
+    width: 100%;
+    height: calc(100vh - 80px);
+    position: absolute;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    transition: all 0.5s;
+    z-index: 2;
+
+
+}
+
+.closeMenu {
+    background-color: #2C2C2C;
+    width: 100%;
+    height: calc(100vh - 80px);
+    position: absolute;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    left: -100%;
+    transition: all 0.5s;
+    z-index: 2;
+
+}
+
+
+
+.navItem a {
+    color: white;
+    padding: 20px 20px;
+    display: inline-block;
+    font-size: 18px;
+
+}
+
+.navItem a:hover {
+    color: #FF8C00;
+}
+
+.loginWrapper a {
+    color: white;
+    padding: 20px 20px;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+
+@media (max-width: 767px) {
+    .appBar {
+        display: flex;
+    }
+
+
+
+}
