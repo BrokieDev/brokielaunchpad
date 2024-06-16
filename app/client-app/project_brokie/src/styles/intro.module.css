@@ -1,0 +1,111 @@
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+.introText {
+    width: 48%;
+    height: fit-content;
+}
+
+.introText h1 {
+    font-size: 7vh;
+    padding-bottom: 2rem;
+    color: white;
+}
+
+.introText p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: white;
+}
+
+.buttonWrapper {
+    margin-top: 50px;
+}
+
+.buttonWrapper button {
+    cursor: pointer;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+
+
+
+}
+
+.buttonWrapper button:first-of-type {
+    margin-right: 2em;
+    background: linear-gradient(to right, #FF8A00, #D0A713);
+}
+
+.buttonWrapper button:first-of-type:hover {
+    background: linear-gradient(to right, #D0A713, #FF8A00);
+}
+
+
+.buttonWrapper button:last-of-type {
+    background: linear-gradient(to right, #303032, #2B2727);
+}
+
+.buttonWrapper button:last-of-type:hover {
+    background: linear-gradient(to right, #2B2727, #303032);
+}
+
+
+.introCards {
+    width: 48%;
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    position: relative;
+
+}
+
+.gradient {
+    width: 25rem;
+    height: 30rem;
+    border-radius: 50%;
+    margin-top: -3rem;
+    background-image: linear-gradient(#7353E580, #CE4DA480);
+    filter: blur(30px);
+
+}
+
+.card {
+    width: 50%;
+    height: 20rem;
+    position: absolute;
+    top: 50px;
+}
+
+.cardMiddle {
+
+    background-color: red;
+    z-index: 3;
+    margin: 0 25%;
+
+
+}
+
+.cardRight {
+
+    background-color: green;
+    margin: 0 5% 0 45%;
+
+    z-index: 2;
+    transform: rotate(10deg);
+
+}
+
+.cardLeft {
+    z-index: 1;
+    background-color: yellow;
+    transform: rotate(-10deg);
+    margin: 0 45% 0 5%;
+
+
+}
