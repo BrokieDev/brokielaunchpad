@@ -79,6 +79,13 @@
     transition: all 0.5s;
 }
 
+.cardsWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: space-between;
+    gap: 50px;
+    padding: 50px 0;
+}
 
 
 
