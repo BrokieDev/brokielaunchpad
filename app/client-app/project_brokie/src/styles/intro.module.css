@@ -80,30 +80,33 @@
     height: 32vh;
     position: absolute;
     top: 50px;
+    background-color: #0F1A2B;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
+                0 6px 20px rgba(0, 0, 0, 0.19);
 }
 
-.cardMiddle {
+.card img{
+    width: 100%;
+    height: 100%;
+}
 
-    background-color: red;
+
+
+
+.cardMiddle {
     z-index: 3;
     margin: 0 25%;
-
-
 }
 
 .cardRight {
-
-    background-color: green;
     margin: 0 5% 0 45%;
-
-    z-index: 2;
+   z-index: 2;
     transform: rotate(10deg);
 
 }
 
 .cardLeft {
     z-index: 1;
-    background-color: yellow;
     transform: rotate(-10deg);
     margin: 0 45% 0 5%;
 }
@@ -141,8 +144,10 @@
     .introCards {
         width: 80%;
     }
-    .introText{
+
+    .introText {
         width: 80%;
+        margin-top: 50px;
     }
 
     .introText h1,
@@ -150,7 +155,7 @@
         text-align: center;
     }
 
-    .buttonWrapper{
+    .buttonWrapper {
         width: 100%;
         display: flex;
         justify-content: space-evenly;
@@ -165,15 +170,16 @@
     .introCards {
         width: 80%;
     }
-    .introText{
+
+    .introText {
         width: 80%;
     }
 
-    .introText h1{
+    .introText h1 {
         font-size: 3rem;
     }
 
-    
+
     .card {
         height: 15rem;
         width: 20rem;
@@ -183,8 +189,8 @@
 
 @media (max-width: 575px) {
 
-    .introCards{
-        height:auto;
+    .introCards {
+        height: auto;
     }
 
     .gradient {
@@ -196,15 +202,17 @@
         width: 12rem;
     }
 
-    .buttonWrapper{
+    .buttonWrapper {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .buttonWrapper button:first-of-type{
+
+    .buttonWrapper button:first-of-type {
         margin: 0;
     }
-    .buttonWrapper button:last-of-type{
+
+    .buttonWrapper button:last-of-type {
         margin-top: 15px;
     }
 

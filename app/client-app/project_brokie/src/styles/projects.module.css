@@ -1,0 +1,94 @@
+.container {
+    width: 90%;
+    margin: 0 5%;
+    height: 100vh;
+}
+
+.projectsTop {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projectsTop h2 {
+    display: flex;
+    align-items: center;
+
+}
+
+.projectsTop h2 span {
+    font-size: 3rem;
+    color: white;
+    font-weight: 500;
+}
+
+.projectsTop h2 img {
+    margin-left: 2rem;
+    width: 20px;
+    height: 20px;
+}
+
+.buttonWrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.buttonWrapper button {
+    cursor: pointer;
+    color: white;
+    padding: 15px 40px;
+    background-color: black;
+    border: solid 1px #FF8A00;
+
+}
+
+.buttonWrapper button:last-of-type {
+    border-left: none;
+}
+
+.buttonWrapper button:first-of-type {
+    border-right: none;
+}
+
+.buttonWrapper span {
+    background: linear-gradient(to right, #FF8A00, #D0A713);
+    width: 50%;
+    height: 100%;
+    pointer-events: none;
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    top: 0;
+
+}
+
+.left_active {
+    transition: all 0.5s;
+    left: 0;
+}
+
+.right_active {
+    left: 50%;
+    transition: all 0.5s;
+}
+
+
+
+
+
+@media (max-width: 991px) {
+    .container {
+        width: 92%;
+        margin: 0 4%;
+        height: fit-content;
+        padding-bottom: 25px;
+    }
+
+
+}

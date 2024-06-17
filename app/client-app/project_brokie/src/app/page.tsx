@@ -1,4 +1,5 @@
 import Header from '@/components/home/Header';
+import Projects from '@/components/home/Projects';
 import TopLeftGradient from '@/components/others/TopLeftGradient';
 import TopRightGradient from '@/components/others/TopRightGradient';
 
@@ -11,6 +12,7 @@ export default function Home() {
       {/* ------ */}
 
       <Header></Header>
+      <Projects></Projects>
     </main>
   );
 }
