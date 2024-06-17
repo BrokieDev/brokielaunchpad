@@ -34,6 +34,7 @@
     display: flex;
     align-items: center;
     position: relative;
+
 }
 
 
@@ -63,7 +64,7 @@
     color: white;
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     top: 0;
 
 }
@@ -90,5 +91,24 @@
         padding-bottom: 25px;
     }
 
+    .projectsTop {
+        height: auto;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .projectsTop h2 {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .projectsTop h2 span {
+        text-align: center;
+
+    }
+
+    .projectsTop h2 img {
+        display: none;
+    }
 
 }
