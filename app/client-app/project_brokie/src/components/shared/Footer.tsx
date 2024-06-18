@@ -5,7 +5,7 @@ import styles from '@/styles/footer.module.css'
 
 const Footer = () => {
     return (
-        <div className={styles.main}>
+        <div className={styles.footer}>
             <FooterMain></FooterMain>
             <FooterBottom></FooterBottom>
         </div>
