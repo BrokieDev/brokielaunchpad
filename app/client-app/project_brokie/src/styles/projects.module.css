@@ -1,8 +1,8 @@
 .container {
     width: 90%;
     margin: 0 5%;
-    height: fit-content;
     padding-bottom: 50px;
+    overflow: hidden;
 }
 
 .projectsTop {
@@ -105,8 +105,6 @@
     .container {
         width: 92%;
         margin: 0 4%;
-        height: fit-content;
-        padding-bottom: 25px;
     }
 
     .projectsTop {
@@ -130,7 +128,7 @@
     }
 
     .cardsWrapper {
-        gap: 5%;
+        gap: 2em;
         grid-template-columns: repeat(2, 1fr);
 
     }
@@ -138,7 +136,7 @@
 
 @media (max-width: 767px) {
     .cardsWrapper {
-        gap: 3%;
+        gap: 25px;
         grid-template-columns: repeat(1, 1fr);
 
     }

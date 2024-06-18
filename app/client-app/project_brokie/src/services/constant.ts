@@ -1,4 +1,10 @@
 import { TNavItems } from "@/types/tConstant";
+import x from '@/assets/icons/social/x.png'
+import linked_in from '@/assets/icons/social/linked_in.png'
+import facebook from '@/assets/icons/social/facebook.png'
+import github from '@/assets/icons/social/github.png'
+import angelList from '@/assets/icons/social/angel_list.png'
+import dribble from '@/assets/icons/social/dribble.png'
 
 export const navItems: TNavItems[] = [
   {
@@ -164,3 +170,30 @@ export  const fItems = [
     ],
   },
 ];
+
+export const socials =[
+  {
+    icon: x,
+    url: ''
+  },
+  {
+    icon: linked_in,
+    url: ''
+  },
+  {
+    icon: github,
+    url: ''
+  },
+  {
+    icon: facebook,
+    url: ''
+  },
+  {
+    icon: angelList,
+    url: ''
+  },
+  {
+    icon: dribble,
+    url: ''
+  },
+]
