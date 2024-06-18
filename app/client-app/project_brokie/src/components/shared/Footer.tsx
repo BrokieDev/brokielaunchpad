@@ -1,9 +1,13 @@
 import React from 'react';
+import FooterMain from './FooterMain';
+import FooterBottom from './FooterBottom';
+import styles from '@/styles/footer.module.css'
 
 const Footer = () => {
     return (
-        <div>
-            
+        <div className={styles.main}>
+            <FooterMain></FooterMain>
+            <FooterBottom></FooterBottom>
         </div>
     );
 };

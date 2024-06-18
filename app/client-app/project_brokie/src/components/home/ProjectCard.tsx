@@ -13,9 +13,15 @@ const ProjectCard = () => {
 
   const [hoverWidth, setHoverWidth] = useState(0);
 
-  const handleMouseMove = (e: any) => {};
+  const handleHover = (event: any) => {
+    const div = event.currentTarget;
+    const rect = div.getBoundingClientRect();
+    const hoverX = event.clientX - rect.left;
+    const widthPercent = (hoverX / rect.width) * 100;
+    setHoverWidth(Math.round(widthPercent));
+  };
 
-  console.log(hoverWidth);
+
   return (
     <div className={styles.projectCard}>
       <div className={styles.info}>
@@ -52,15 +58,12 @@ const ProjectCard = () => {
         </div>
         <div className={styles.progress}>
           <h4>Progress (51%)</h4>
-          <div
-            onMouseMove={handleMouseMove}
-            className={styles.progressBarNormal}
-          >
+          <div onMouseMove={handleHover} className={styles.progressBarNormal}>
             <span
-              style={{ left: `calc(${progress}% - 10px)` }}
+              style={{ left: `calc(${hoverWidth}% - 10px)` }}
               className={styles.tooltip}
             >
-              0%
+              {hoverWidth}%
             </span>
             <div
               style={{ width: `${progress}%` }}
@@ -70,9 +73,7 @@ const ProjectCard = () => {
         </div>
         <div className={styles.buttons}>
           <button>
-            <FaChartArea 
-            className={styles.chart}
-            />
+            <FaChartArea className={styles.chart} />
             Invest
           </button>
           <button>
