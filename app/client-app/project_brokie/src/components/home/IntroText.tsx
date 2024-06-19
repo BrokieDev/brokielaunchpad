@@ -1,5 +1,7 @@
+
 import React from 'react';
 import styles from '@/styles/intro.module.css';
+import WalletModal from './WalletModal';
 
 const IntroText = () => {
   return (
@@ -11,9 +13,9 @@ const IntroText = () => {
         maiores, dicta earum tempora laborum.
       </p>
       <div className={styles.buttonWrapper}>
-        <button>Connect Wallet</button>
         <button>Learn More</button>
       </div>
+   
     </div>
   );
 };

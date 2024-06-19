@@ -23,6 +23,7 @@
 }
 
 .buttonWrapper {
+    display: flex;
     margin-top: 50px;
 }
 
@@ -32,14 +33,9 @@
     padding: 15px 40px;
     border-radius: 5px;
     transition: background 0.3s ease;
-
-
-
-}
-
-.buttonWrapper button:first-of-type {
     margin-right: 2em;
     background: linear-gradient(to right, #FF8A00, #D0A713);
+
 }
 
 .buttonWrapper button:first-of-type:hover {
@@ -47,13 +43,7 @@
 }
 
 
-.buttonWrapper button:last-of-type {
-    background: linear-gradient(to right, #303032, #2B2727);
-}
 
-.buttonWrapper button:last-of-type:hover {
-    background: linear-gradient(to right, #2B2727, #303032);
-}
 
 
 .introCards {

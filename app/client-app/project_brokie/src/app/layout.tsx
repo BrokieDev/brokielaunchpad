@@ -1,10 +1,12 @@
-'use client'
+'use client';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { TonConnectUIProvider } from '@tonconnect/ui-react';
+import { createContext, useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
+const GlobalContext = createContext('' as any);
 
 // export const metadata: Metadata = {
 //   title: 'Create Next App',
@@ -16,10 +18,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [openModal, setOpenModal] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const value = {
+    openModal,
+    setOpenModal,
+    openMenu,
+    setOpenMenu,
+  };
+
   return (
     <html lang="en">
-      <TonConnectUIProvider manifestUrl="http://localhost/tonMenifest.json">
-        <body className={inter.className}>{children}</body>
+      <TonConnectUIProvider manifestUrl="https://raw.githubusercontent.com/Brokieinu/brokielaunchpad/development/app/client-app/project_brokie/tonMenifest.json">
+        <GlobalContext.Provider value={value}>
+          <body className={inter.className}>{children}</body>
+        </GlobalContext.Provider>
       </TonConnectUIProvider>
     </html>
   );

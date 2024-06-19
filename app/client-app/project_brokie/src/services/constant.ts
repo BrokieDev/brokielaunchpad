@@ -197,3 +197,7 @@ export const socials =[
     url: ''
   },
 ]
+
+
+export const defaultAvatar =
+  "https://kwunsplash.s3.us-east-2.amazonaws.com/avatar.jpg";
