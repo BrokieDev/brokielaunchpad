@@ -99,12 +99,20 @@
 
 }
 
+@media (max-width: 1199px) {
+    .navbarLeft {
+        width: 65%;
+    }
+    .navbarRight{
+        width: 30%;
+    }
+
+}
 
 
 
 
-
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .navbar {
         display: none;
     }
