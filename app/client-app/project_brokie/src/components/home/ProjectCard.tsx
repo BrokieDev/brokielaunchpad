@@ -7,13 +7,14 @@ import Image from 'next/image';
 import invest from '@/assets/icons/invest.png';
 import view from '@/assets/icons/view.png';
 import { FaChartArea } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 
 type TProjectCard = {
   pathname?: string;
 };
 
 const ProjectCard = ({ pathname }: TProjectCard) => {
-  console.log(pathname);
+  const router = useRouter();
   const progress = 51;
 
   const [hoverWidth, setHoverWidth] = useState(0);
@@ -76,11 +77,18 @@ const ProjectCard = ({ pathname }: TProjectCard) => {
           </div>
         </div>
         <div className={styles.buttons}>
-          <button>
-            <FaChartArea className={styles.chart} />
-            {pathname === '/my_claims' ? 'Claim Coins' : 'Invest'}
-          </button>
-          <button>
+          {pathname === '/my_claims' ? (
+            <button onClick={() => router.push('/view_coin/0')}>
+              <FaChartArea className={styles.chart} />
+              Claim Coin
+            </button>
+          ) : (
+            <button onClick={() => router.push('/view_coin/0')}>
+              <FaChartArea className={styles.chart} />
+              Invest
+            </button>
+          )}
+          <button onClick={() => router.push('/view_coin/0')}>
             <Image
               className={styles.view}
               src={view}

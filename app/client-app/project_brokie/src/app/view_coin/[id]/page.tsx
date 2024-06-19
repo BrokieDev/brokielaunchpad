@@ -1,12 +1,8 @@
-import Header from '@/components/home/Header';
-import Projects from '@/components/home/Projects';
 import TopLeftGradient from '@/components/others/TopLeftGradient';
 import TopRightGradient from '@/components/others/TopRightGradient';
 import AppBar from '@/components/shared/AppBar';
-import Footer from '@/components/shared/Footer';
 import Navbar from '@/components/shared/Navbar';
 import React from 'react';
-import MyClaims from '@/components/my_claims/MyClaims';
 
 const page = () => {
   return (
@@ -16,12 +12,10 @@ const page = () => {
       <TopRightGradient></TopRightGradient>
       {/* ------ */}
 
-      <div className='container'>
+      <div className="container">
         <Navbar></Navbar>
         <AppBar></AppBar>
       </div>
-      <MyClaims></MyClaims>
-      <Footer></Footer>
     </main>
   );
 };

@@ -39,3 +39,18 @@ main{
     border-bottom-right-radius: 100px; 
 }
 
+.container {
+    width: 90%;
+    margin: 0 5%;
+}
+
+@media (max-width: 991px) {
+    .container {
+        width: 92%;
+        margin: 0 4%;
+        height: fit-content;
+        padding-bottom: 25px;
+    }
+
+
+}

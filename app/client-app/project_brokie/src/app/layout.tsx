@@ -30,7 +30,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <TonConnectUIProvider manifestUrl="https://raw.githubusercontent.com/Brokieinu/brokielaunchpad/development/app/client-app/project_brokie/tonMenifest.json">
+      <TonConnectUIProvider manifestUrl={process.env.NEXT_PUBLIC_TON_MANIFEST}>
         <GlobalContext.Provider value={value}>
           <body className={inter.className}>{children}</body>
         </GlobalContext.Provider>
