@@ -26,12 +26,9 @@ const Projects = () => {
         </div>
       </div>
       <div className={styles.cardsWrapper}>
-        <ProjectCard></ProjectCard>
-        <ProjectCard></ProjectCard>
-        <ProjectCard></ProjectCard>
-        <ProjectCard></ProjectCard>
-        <ProjectCard></ProjectCard>
-        <ProjectCard></ProjectCard>
+        {[...Array(5)].map((i: number) => (
+          <ProjectCard key={i}></ProjectCard>
+        ))}
       </div>
     </div>
   );

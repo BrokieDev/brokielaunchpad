@@ -8,7 +8,12 @@ import invest from '@/assets/icons/invest.png';
 import view from '@/assets/icons/view.png';
 import { FaChartArea } from 'react-icons/fa';
 
-const ProjectCard = () => {
+type TProjectCard = {
+  pathname?: string;
+};
+
+const ProjectCard = ({ pathname }: TProjectCard) => {
+  console.log(pathname);
   const progress = 51;
 
   const [hoverWidth, setHoverWidth] = useState(0);
@@ -20,7 +25,6 @@ const ProjectCard = () => {
     const widthPercent = (hoverX / rect.width) * 100;
     setHoverWidth(Math.round(widthPercent));
   };
-
 
   return (
     <div className={styles.projectCard}>
@@ -74,7 +78,7 @@ const ProjectCard = () => {
         <div className={styles.buttons}>
           <button>
             <FaChartArea className={styles.chart} />
-            Invest
+            {pathname === '/my_claims' ? 'Claim Coins' : 'Invest'}
           </button>
           <button>
             <Image
