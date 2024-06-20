@@ -1,0 +1,16 @@
+.middleContainer {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 5rem;
+}
+
+.middleContainerLeft {
+    width: 67%;
+    height: 100%;
+    background-color: #101A2A;
+    border-radius: 10px;
+    border: 1px solid #5A5A5A;
+}
