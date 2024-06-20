@@ -1,7 +1,6 @@
 
 import React from 'react';
 import styles from '@/styles/intro.module.css';
-import WalletModal from './WalletModal';
 
 const IntroText = () => {
   return (

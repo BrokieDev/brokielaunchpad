@@ -2,8 +2,9 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { TonConnectUIProvider } from '@tonconnect/ui-react';
-import { createContext, useState } from 'react';
+import { TonConnect, TonConnectUIProvider } from '@tonconnect/ui-react';
+import { createContext, useEffect, useState } from 'react';
+import { useTonConnect } from '@/hooks/useTonConnect';
 
 const inter = Inter({ subsets: ['latin'] });
 const GlobalContext = createContext('' as any);
@@ -21,6 +22,12 @@ export default function RootLayout({
   const [openModal, setOpenModal] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
 
+  const { tonConnect, error } = useTonConnect(
+    process.env.NEXT_PUBLIC_TON_MANIFEST,
+  );
+
+
+
   const value = {
     openModal,
     setOpenModal,
@@ -30,6 +37,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>{/* Additional head elements */}</head>
       <TonConnectUIProvider manifestUrl={process.env.NEXT_PUBLIC_TON_MANIFEST}>
         <GlobalContext.Provider value={value}>
           <body className={inter.className}>{children}</body>

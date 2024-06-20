@@ -62,7 +62,9 @@
 .middleContainerRight {
     width: 30%;
     height: 100%;
-    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 @media (max-width: 1199px) {
@@ -84,9 +86,19 @@
         padding: 25px 0;
     }
 
+    .middleContainerLeft{
+        margin-top: -20px;
+
+    }
+    .middleContainerRight{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
     .middleContainerLeft,
     .middleContainerRight {
-        margin-top: -20px;
         height: auto;
         width: 100%;
 
@@ -100,5 +112,18 @@
     .listItem {
         height: 60px;
         padding-top: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .middleContainerRight{
+        gap: 1rem;
+    }
+}
+@media (max-width: 639px) {
+    .middleContainerRight{
+       display: grid;
+       justify-content: center;
+       grid-template-columns: repeat(1, 60%);
     }
 }

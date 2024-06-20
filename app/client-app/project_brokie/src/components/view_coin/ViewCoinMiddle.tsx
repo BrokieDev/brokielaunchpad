@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from '@/styles/viewCoinMiddle.module.css';
+import ViewCoinClaim from './ViewCoinClaim';
+import ViewCoinToken from './ViewCoinToken';
 
 const ViewCoinMiddle = () => {
   const items = [
@@ -34,7 +36,8 @@ const ViewCoinMiddle = () => {
         </ul>
       </div>
       <div className={styles.middleContainerRight}>
-       
+        <ViewCoinClaim></ViewCoinClaim>
+        <ViewCoinToken></ViewCoinToken>
       </div>
     </div>
   );

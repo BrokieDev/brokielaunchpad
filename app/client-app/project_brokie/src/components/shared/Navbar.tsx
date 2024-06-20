@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '@/styles/navbar.module.css';
 import Image from 'next/image';
 import logo from '@/assets/logo/logo.png';
@@ -13,6 +13,13 @@ import { LuBaggageClaim } from 'react-icons/lu';
 
 const Navbar = () => {
   const wallet = useTonWallet();
+
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return <></>;
 
   return (
     <div className={styles.navbar}>

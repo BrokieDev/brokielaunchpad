@@ -10,9 +10,9 @@ const FooterBottom = () => {
       <div>
         <div className={styles.copyright}>©All rights reserved.</div>
         <div className={styles.social}>
-          {socials.map((s) => (
+          {socials.map((s, i) => (
             <Link
-            key={s.url}
+            key={i}
             href={s.url}>
               <Image
                 src={s.icon}
