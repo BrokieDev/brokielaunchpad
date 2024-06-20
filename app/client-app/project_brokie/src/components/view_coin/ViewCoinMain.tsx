@@ -7,7 +7,7 @@ const ViewCoinMain = () => {
   return (
     <div className={styles.mainContainer}>
       <ViewCoinTop></ViewCoinTop>
-      {/* <ViewCoinMiddle></ViewCoinMiddle> */}
+      <ViewCoinMiddle></ViewCoinMiddle>
     </div>
   );
 };
