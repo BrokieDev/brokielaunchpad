@@ -33,7 +33,9 @@ const ViewCoinMiddle = () => {
           ))}
         </ul>
       </div>
-      <div className={styles.middleContainerRight}></div>
+      <div className={styles.middleContainerRight}>
+       
+      </div>
     </div>
   );
 };

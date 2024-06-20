@@ -64,3 +64,29 @@
     height: 100%;
     background-color: yellow;
 }
+
+@media (max-width: 991px) {
+    .middleContainer {
+        display: block;
+        height: fit-content;
+        padding: 25px 0;
+    }
+
+    .middleContainerLeft,
+    .middleContainerRight {
+        margin-top: -20px;
+        height: auto;
+        width: 100%;
+
+    }
+
+    .listContainer {
+        height: auto;
+
+    }
+
+    .listItem {
+        height: 60px;
+        padding-top: 10px;
+    }
+}
