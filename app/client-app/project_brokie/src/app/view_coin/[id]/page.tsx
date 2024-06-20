@@ -1,7 +1,9 @@
 import TopLeftGradient from '@/components/others/TopLeftGradient';
 import TopRightGradient from '@/components/others/TopRightGradient';
 import AppBar from '@/components/shared/AppBar';
+import Footer from '@/components/shared/Footer';
 import Navbar from '@/components/shared/Navbar';
+import ViewCoinMain from '@/components/view_coin/ViewCoinMain';
 import React from 'react';
 
 const page = () => {
@@ -16,6 +18,8 @@ const page = () => {
         <Navbar></Navbar>
         <AppBar></AppBar>
       </div>
+      <ViewCoinMain></ViewCoinMain>
+      <Footer></Footer>
     </main>
   );
 };
