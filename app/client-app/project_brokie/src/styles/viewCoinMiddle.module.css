@@ -65,6 +65,18 @@
     background-color: yellow;
 }
 
+@media (max-width: 1199px) {
+
+ .middleContainerLeft{
+    width: 64%;
+
+ }
+ .middleContainerRight{
+    width: 34%;
+ }
+
+}
+
 @media (max-width: 991px) {
     .middleContainer {
         display: block;
