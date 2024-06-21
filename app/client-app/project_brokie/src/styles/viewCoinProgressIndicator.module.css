@@ -1,0 +1,95 @@
+.indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    height: 10rem;
+    padding-top: 10px;
+}
+
+.indicatorCircle {
+    border-radius: 50%;
+    width: 30%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.indicatorCircleActive {
+    border: 1px solid #03F448;
+
+}
+
+.indicatorCircleInactive {
+    border: 1px solid #B0B0B0;
+
+}
+
+
+.indicatorCircle>div>span {
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+    display: inline-block;
+}
+
+
+.indicatorCircleActive>div>span {
+    background-color: #03F448;
+
+}
+
+.indicatorCircleInactive>div>span {
+    background-color: #B0B0B0;
+
+}
+
+.indicatorCircle>div {
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.indicatorCircleActive>div {
+    border: 1px solid #03F448;
+
+}
+.indicatorCircleInactive>div {
+    border: 1px solid #B0B0B0;
+
+}
+
+.indicatorLine::after {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 175px;
+    /* Adjust based on spacing between steps */
+    height: 1px;
+    background: linear-gradient(to right, #6FFF98, #00982C);
+
+    transform: translateY(-50%);
+}
+
+.indicatorText h3 {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    padding: 5px 0;
+    text-transform: capitalize;
+    margin-top: 5px;
+}
+
+.indicatorText h5 {
+    color: #D9D9D9;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    padding: 2px 0;
+}
