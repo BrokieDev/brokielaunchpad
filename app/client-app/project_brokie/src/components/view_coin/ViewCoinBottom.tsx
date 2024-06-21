@@ -40,7 +40,28 @@ const ViewCoinBottom = () => {
           ></ViewCoinProgressIndicator>
         ))}
       </div>
-      <div className={styles.bottomContainerRight}></div>
+      <div className={styles.bottomContainerRight}>
+        <div>
+          <span>Status</span>
+          <span className={styles.textGreen}>Finished</span>
+        </div>
+        <div>
+          <span>Sale Type</span>
+          <span className={styles.textGreen}>Public</span>
+        </div>
+        <div>
+          <span>Current Make</span>
+          <span>0.000321 TON</span>
+        </div>
+        <div>
+          <span>Total Contributors</span>
+          <span>212 TON</span>
+        </div>
+        <div>
+          <span>Your Contribution</span>
+          <span>0 TON</span>
+        </div>
+      </div>
     </div>
   );
 };
