@@ -1,26 +1,15 @@
-'use client';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from '@/styles/navbar.module.css';
 import Image from 'next/image';
 import logo from '@/assets/logo/logo.png';
-import { defaultAvatar, navItems } from '@/services/constant';
+import { navItems } from '@/services/constant';
 import { TNavItems } from '@/types/tConstant';
 import Link from 'next/link';
 import ringIcon from '@/assets/icons/ring.png';
 import searchIcon from '@/assets/icons/search.png';
-import { TonConnectButton, useTonWallet } from '@tonconnect/ui-react';
-import { LuBaggageClaim } from 'react-icons/lu';
+import NavbarRight from './NavbarRight';
 
 const Navbar = () => {
-  const wallet = useTonWallet();
-
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return <></>;
-
   return (
     <div className={styles.navbar}>
       <div className={styles.navbarLeft}>
@@ -40,23 +29,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <div className={styles.navbarRight}>
-        <span className={styles.tooltip}>My Claims</span>
-
-        {wallet && (
-          <>
-            <Link href="/my_claims">
-              <LuBaggageClaim className={styles.icon}></LuBaggageClaim>
-            </Link>
-            <img
-              src={defaultAvatar}
-              alt="avatar"
-              className={styles.avatar}
-            ></img>
-          </>
-        )}
-        <TonConnectButton className="my-button-class"></TonConnectButton>
-      </div>
+      <NavbarRight></NavbarRight>
     </div>
   );
 };
