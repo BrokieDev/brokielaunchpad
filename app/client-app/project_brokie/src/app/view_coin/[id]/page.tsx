@@ -3,6 +3,7 @@ import TopRightGradient from '@/components/others/TopRightGradient';
 import AppBar from '@/components/shared/AppBar';
 import Footer from '@/components/shared/Footer';
 import Navbar from '@/components/shared/Navbar';
+import FAQ from '@/components/view_coin/FAQ';
 import ViewCoinMain from '@/components/view_coin/ViewCoinMain';
 import React from 'react';
 
@@ -19,6 +20,7 @@ const page = () => {
         <AppBar></AppBar>
       </div>
       <ViewCoinMain></ViewCoinMain>
+      <FAQ></FAQ>
       <Footer></Footer>
     </main>
   );
