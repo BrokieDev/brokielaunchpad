@@ -29,3 +29,34 @@
 
 
 }
+
+
+@media (max-width: 1199px) {
+
+    .bottomContainer {
+        flex-direction: column;
+    }
+
+    .bottomContainerLeft {
+        width: 100%;
+        height: 800px;
+    }
+
+    .bottomContainerRight {
+        width: 100%;
+    }
+
+}
+
+
+
+@media (max-width: 841px) {
+    .bottomContainer{
+        height: fit-content;
+        padding-bottom: 25px;
+    }
+    .bottomContainerLeft {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}

@@ -54,10 +54,12 @@
     align-items: center;
     justify-content: center;
 }
+
 .indicatorCircleActive>div {
     border: 1px solid #03F448;
 
 }
+
 .indicatorCircleInactive>div {
     border: 1px solid #B0B0B0;
 
@@ -92,4 +94,86 @@
     font-weight: 500;
     text-align: center;
     padding: 2px 0;
+}
+
+
+
+
+
+@media (max-width: 841px) {
+    .indicator {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 70%;
+        margin: 0 15%;
+        height: 25%;
+    }
+
+    .indicatorCircle {
+        height: 5rem;
+        width: 13%;
+    }
+
+    .indicatorLine::after {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        /* Adjust based on spacing between steps */
+        height: 175px;
+    }
+}
+
+@media (max-width: 767px) {
+    .indicatorCircle {
+        height: 5rem;
+        width: 14%;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .indicatorCircle {
+        height: 4.5rem;
+        width: 14%;
+    }
+
+}
+
+@media (max-width: 639px) {
+
+    .indicator {
+        width: 80%;
+        margin: 0 10%;
+
+    }
+
+    .indicatorCircle {
+        height: 4rem;
+        width: 14%;
+    }
+
+}
+
+@media (max-width: 575px) {
+
+
+
+    .indicatorCircle {
+        height: 4rem;
+        width: 15%;
+    }
+
+}
+@media (max-width: 420px) {
+
+
+
+    .indicatorCircle {
+        height: 3rem;
+        width: 16%;
+    }
+
 }
