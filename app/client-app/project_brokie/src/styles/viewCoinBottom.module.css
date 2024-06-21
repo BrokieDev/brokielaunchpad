@@ -55,7 +55,8 @@
         flex-direction: column;
         height: fit-content;
         padding-top: 50px;
-        padding-bottom: 50px;
+        background-color: green;
+
 
     }
 
@@ -81,13 +82,17 @@
 
     }
 
+
 }
 
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+    .bottomContainer {
+        padding: 0;
 
-@media (max-width: 700px) {}
+    }
+}
 
-@media (max-width: 639px) {}
+
 
 @media (max-width: 575px) {}
 
