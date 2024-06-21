@@ -98,6 +98,20 @@
 
 
 
+@media (max-width: 991px) {
+
+    .indicatorCircle {
+        height: 3rem;
+        width: 25%;
+    }
+
+    .indicatorLine::after {
+
+        width: 160px;
+    }
+}
+
+
 
 
 @media (max-width: 841px) {
@@ -112,7 +126,7 @@
 
     .indicatorCircle {
         height: 5rem;
-        width: 13%;
+        width: 15%;
     }
 
     .indicatorLine::after {
@@ -121,15 +135,17 @@
         transform: translateX(-50%);
         width: 1px;
         /* Adjust based on spacing between steps */
-        height: 175px;
+        height: 160px;
     }
 }
 
 @media (max-width: 767px) {
     .indicatorCircle {
         height: 5rem;
-        width: 14%;
+        width: 16%;
     }
+
+ 
 
 }
 
@@ -137,9 +153,10 @@
 
     .indicatorCircle {
         height: 4.5rem;
-        width: 14%;
+        width: 15%;
     }
 
+    
 }
 
 @media (max-width: 639px) {
@@ -162,18 +179,17 @@
 
 
     .indicatorCircle {
-        height: 4rem;
+        height: 3.75rem;
         width: 15%;
     }
 
 }
+
 @media (max-width: 420px) {
-
-
 
     .indicatorCircle {
         height: 3rem;
-        width: 16%;
+        width: 17%;
     }
 
 }
