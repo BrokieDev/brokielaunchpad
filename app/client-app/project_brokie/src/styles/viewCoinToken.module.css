@@ -6,8 +6,87 @@
     border: 1px solid #5A5A5A;
 }
 
+.card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-left: 5%;
+    color: white;
+}
+
+.chartWrapper {
+    width: 60%;
+    height: auto;
+    margin-left: 20%;
+    margin-top: 30px;
+}
+
+.textWrapper {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+
+.textWrapper>div {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.textWrapper>div span:first-of-type {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+}
+
+.textWrapper>div span:last-of-type {
+    font-size: 14px;
+    color: white;
+    font-weight: 600;
+    margin-left: 10px;
+
+
+}
+
+@media (max-width: 1199px) {
+
+  
+
+    .textWrapper {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    
+    }
+}
+
+
 @media (max-width: 991px) {
     .card {
-        height: 400px;
+        height: auto;
+        padding: 25px 0;
+        background-color: #101A2A;
+    }
+
+    .textWrapper {
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+    
+    }
+}
+@media (max-width: 575px) {
+    
+
+    .textWrapper {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    
     }
 }
