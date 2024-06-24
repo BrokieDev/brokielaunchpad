@@ -14,9 +14,9 @@ const Chart = () => {
         ]}
         label={({ dataEntry }) => `${Math.round(dataEntry.percentage)}%`}
         labelStyle={{
-          fontSize: '5px',
-          color: 'white',
-          fontWeight: '800',
+          fill: '#FFFFFF',
+          fontSize: '6px',
+          fontWeight: '700',
         }}
         labelPosition={60}
       />
