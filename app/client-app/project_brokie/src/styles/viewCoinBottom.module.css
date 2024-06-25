@@ -15,7 +15,7 @@
     width: 68%;
     height: 100%;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 
 }
@@ -50,27 +50,42 @@
     color: #00FF1A !important;
 }
 
-@media (max-width: 1168px) {
+@media (max-width: 1200px) {
     .bottomContainer {
         flex-direction: column;
         height: fit-content;
-        padding-top: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
 
 
     }
 
     .bottomContainerLeft {
         width: 90%;
+        height: 250px;
     }
 
     .bottomContainerRight {
         width: 96%;
-        height: 200px;
+        height: 250px;
         margin: 2%;
     }
 }
 
 
+
+@media (max-width: 991px) {
+
+    .bottomContainerLeft {
+        height: 800px;
+        padding: none;
+
+
+
+    }
+
+
+}
 
 @media (max-width: 841px) {
 
