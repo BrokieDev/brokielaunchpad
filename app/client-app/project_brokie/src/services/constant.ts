@@ -1,10 +1,11 @@
-import { TNavItems } from "@/types/tConstant";
-import x from '@/assets/icons/social/x.png'
-import linked_in from '@/assets/icons/social/linked_in.png'
-import facebook from '@/assets/icons/social/facebook.png'
-import github from '@/assets/icons/social/github.png'
-import angelList from '@/assets/icons/social/angel_list.png'
-import dribble from '@/assets/icons/social/dribble.png'
+import { TNavItems } from '@/types/tConstant';
+import x from '@/assets/icons/social/x.png';
+import linked_in from '@/assets/icons/social/linked_in.png';
+import facebook from '@/assets/icons/social/facebook.png';
+import github from '@/assets/icons/social/github.png';
+import angelList from '@/assets/icons/social/angel_list.png';
+import dribble from '@/assets/icons/social/dribble.png';
+import { TIndicatorsItem } from '@/types/indicator';
 
 export const navItems: TNavItems[] = [
   {
@@ -21,9 +22,8 @@ export const navItems: TNavItems[] = [
   },
 ];
 
-
 // item list for footer
-export  const fItems = [
+export const fItems = [
   {
     title: 'Product',
     items: [
@@ -171,33 +171,59 @@ export  const fItems = [
   },
 ];
 
-export const socials =[
+export const socials = [
   {
     icon: x,
-    url: ''
+    url: '',
   },
   {
     icon: linked_in,
-    url: ''
+    url: '',
   },
   {
     icon: github,
-    url: ''
+    url: '',
   },
   {
     icon: facebook,
-    url: ''
+    url: '',
   },
   {
     icon: angelList,
-    url: ''
+    url: '',
   },
   {
     icon: dribble,
-    url: ''
+    url: '',
   },
-]
-
+];
 
 export const defaultAvatar =
-  "https://kwunsplash.s3.us-east-2.amazonaws.com/avatar.jpg";
+  'https://kwunsplash.s3.us-east-2.amazonaws.com/avatar.jpg';
+
+export const indicators: TIndicatorsItem[] = [
+  {
+    title: 'Waiting for pool start',
+    subtitle: 'No one can purchase',
+    lastChild: false,
+    active: true,
+  },
+  {
+    title: 'Pool start',
+    subtitle: 'Pool start at 2024',
+    lastChild: false,
+    active: true,
+  },
+  {
+    title: 'Pool ended',
+    subtitle: 'Pool ended at 2024',
+    lastChild: false,
+    active: true,
+  },
+  {
+    title: 'Claim coins',
+    subtitle: 'Claim coins at 2024',
+    lastChild: true,
+    active: false,
+  },
+];

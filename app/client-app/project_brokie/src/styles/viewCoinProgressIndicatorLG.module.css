@@ -1,0 +1,77 @@
+.indicatorsContainer {
+    width: 90%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.indicatorCircle {
+    border-radius: 50%;
+    width: 5rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.indicatorCircleActive {
+    border: 1px solid #03F448;
+
+}
+
+.indicatorCircleInactive {
+    border: 1px solid #B0B0B0;
+
+}
+
+.indicatorCircle>div {
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.indicatorCircleActive>div {
+    border: 1px solid #03F448;
+
+}
+
+.indicatorCircleInactive>div {
+    border: 1px solid #B0B0B0;
+
+}
+
+
+.indicatorCircle>div>span {
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+    display: inline-block;
+}
+
+
+.indicatorCircleActive>div>span {
+    background-color: #03F448;
+
+}
+
+.indicatorCircleInactive>div>span {
+    background-color: #B0B0B0;
+
+}
+
+
+
+
+
+@media (max-width: 841px) {
+    .indicatorsContainer {
+        display: none;
+    }
+}

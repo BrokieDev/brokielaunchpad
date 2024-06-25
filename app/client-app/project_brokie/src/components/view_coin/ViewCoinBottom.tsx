@@ -2,6 +2,8 @@ import React from 'react';
 import styles from '@/styles/viewCoinBottom.module.css';
 import ViewCoinProgressIndicator from './ViewCoinProgressIndicator';
 import { TIndicatorsItem } from '@/types/indicator';
+import ViewCoinProgressIndicatorLG from './ViewCoinProgressIndicatorLG';
+import ViewCoinProgressIndicatorSM from './ViewCoinProgressIndicatorSM';
 
 const ViewCoinBottom = () => {
   const indicators: TIndicatorsItem[] = [
@@ -33,12 +35,16 @@ const ViewCoinBottom = () => {
   return (
     <div className={styles.bottomContainer}>
       <div className={styles.bottomContainerLeft}>
-        {indicators.map((indicator: TIndicatorsItem, i: number) => (
+        {/* {indicators.map((indicator: TIndicatorsItem, i: number) => (
           <ViewCoinProgressIndicator
             key={i}
             indicator={indicator}
-          ></ViewCoinProgressIndicator>
-        ))}
+            ></ViewCoinProgressIndicator>
+          ))} */}
+
+        <ViewCoinProgressIndicatorLG></ViewCoinProgressIndicatorLG>
+
+        <ViewCoinProgressIndicatorSM></ViewCoinProgressIndicatorSM>
       </div>
       <div className={styles.bottomContainerRight}>
         <div>
