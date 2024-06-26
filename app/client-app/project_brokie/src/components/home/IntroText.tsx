@@ -1,8 +1,10 @@
 
-import React from 'react';
 import styles from '@/styles/intro.module.css';
 
+
 const IntroText = () => {
+
+
   return (
     <div className={styles.introText}>
       <h1>Lorem Ipsum</h1>
@@ -14,7 +16,6 @@ const IntroText = () => {
       <div className={styles.buttonWrapper}>
         <button>Learn More</button>
       </div>
-   
     </div>
   );
 };

@@ -7,6 +7,12 @@ import angelList from '@/assets/icons/social/angel_list.png';
 import dribble from '@/assets/icons/social/dribble.png';
 import { TIndicatorsItem } from '@/types/indicator';
 
+// export const baseUrl =
+//   'https://reason-caroline-triple-boutique.trycloudflare.com/v1';
+
+export const baseUrl =
+  'http://localhost:3002/v1';
+
 export const navItems: TNavItems[] = [
   {
     title: 'Launch pad',

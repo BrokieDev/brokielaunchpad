@@ -11,9 +11,10 @@ import { useRouter } from 'next/navigation';
 
 type TProjectCard = {
   pathname?: string;
+  key: number;
 };
 
-const ProjectCard = ({ pathname }: TProjectCard) => {
+const ProjectCard = ({ pathname, key }: TProjectCard) => {
   const router = useRouter();
   const progress = 51;
 
@@ -28,7 +29,7 @@ const ProjectCard = ({ pathname }: TProjectCard) => {
   };
 
   return (
-    <div className={styles.projectCard}>
+    <div key={key} className={styles.projectCard}>
       <div className={styles.info}>
         <Image src={card_1} alt="img" height={200} width={300}></Image>
         <div className={styles.statusWrapper}>

@@ -5,6 +5,8 @@ import './globals.css';
 import { TonConnect, TonConnectUIProvider } from '@tonconnect/ui-react';
 import { createContext, useEffect, useState } from 'react';
 import { useTonConnect } from '@/hooks/useTonConnect';
+import { Provider } from 'react-redux';
+import store from '@/services/store';
 
 const inter = Inter({ subsets: ['latin'] });
 const GlobalContext = createContext('' as any);
@@ -26,8 +28,6 @@ export default function RootLayout({
     process.env.NEXT_PUBLIC_TON_MANIFEST,
   );
 
-
-
   const value = {
     openModal,
     setOpenModal,
@@ -38,11 +38,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>{/* Additional head elements */}</head>
-      <TonConnectUIProvider manifestUrl={process.env.NEXT_PUBLIC_TON_MANIFEST}>
-        <GlobalContext.Provider value={value}>
-          <body className={inter.className}>{children}</body>
-        </GlobalContext.Provider>
-      </TonConnectUIProvider>
+      <Provider store={store}>
+        <TonConnectUIProvider
+          manifestUrl={process.env.NEXT_PUBLIC_TON_MANIFEST}
+        >
+          <GlobalContext.Provider value={value}>
+            <body className={inter.className}>{children}</body>
+          </GlobalContext.Provider>
+        </TonConnectUIProvider>
+      </Provider>
     </html>
   );
 }

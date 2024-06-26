@@ -1,14 +1,99 @@
 'use client';
 import styles from '@/styles/navbar.module.css';
 import { LuBaggageClaim } from 'react-icons/lu';
-import { TonConnectButton, useTonWallet } from '@tonconnect/ui-react';
+import {
+  TonConnectButton,
+  useTonConnectUI,
+  useTonWallet,
+} from '@tonconnect/ui-react';
 import Link from 'next/link';
-import { defaultAvatar } from '@/services/constant';
+import { baseUrl, defaultAvatar } from '@/services/constant';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import {
+  useCheckTonProofMutation,
+  useGenerateTonProofMutation,
+} from '@/services/api/ohtersApi/authApi';
 
 const NavbarRight = () => {
   const wallet = useTonWallet();
+  const [tonConnectUI] = useTonConnectUI();
+
+  // using RTK Query hooks for fetching tonProof for the server
+  const [fetchTonProof] = useGenerateTonProofMutation();
+  const [checkTonProof] = useCheckTonProofMutation();
+
+  useEffect(() => {
+    const initializeTonConnect = async () => {
+      tonConnectUI.setConnectRequestParameters({
+        state: 'loading',
+      });
+
+      const tonProofPayload: any = await fetchTonProof(null);
+      const tonProof: any = tonProofPayload?.data?.data;
+
+      if (tonProof) {
+        tonConnectUI.setConnectRequestParameters({
+          state: 'ready',
+          value: {
+            tonProof,
+          },
+        });
+
+        tonConnectUI.onStatusChange((wallet: any) => {
+          if (
+            wallet?.connectItems?.tonProof &&
+            'proof' in wallet.connectItems.tonProof
+          ) {
+            handleStatusChange(wallet);
+          }
+        });
+      } else {
+        tonConnectUI.setConnectRequestParameters(null);
+        await tonConnectUI.disconnect();
+      }
+    };
+
+    if (wallet) {
+      initializeTonConnect();
+    }
+  }, [wallet]);
+
+  const handleStatusChange = async (wallet: any) => {
+    const proofData = wallet?.connectItems?.tonProof?.proof;
+
+    const address = {
+      value: wallet?.account?.address,
+    };
+
+    const network = {
+      value: wallet?.account?.chain,
+    };
+
+    const proof = {
+      ...proofData,
+      state_init: wallet?.account?.walletStateInit,
+    };
+
+    const body = {
+      address,
+      network,
+      proof,
+    };
+
+    // await checkProofInYourBackend(body);
+    const result = await checkTonProof(body);
+
+    if (result?.data?.status === 'success') {
+      console.log('connection success');
+    } else {
+      await tonConnectUI.disconnect();
+    }
+  };
+
+  if(!wallet){
+    console.log('disconnected')
+  }
 
   return (
     <div className={styles.navbarRight}>
