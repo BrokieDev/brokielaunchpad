@@ -19,9 +19,12 @@ const NavbarRight = () => {
   const wallet = useTonWallet();
   const [tonConnectUI] = useTonConnectUI();
 
-  // using RTK Query hooks for fetching tonProof for the server
+  // using RTK Query hooks for fetching and checking tonProof from the server 
   const [fetchTonProof] = useGenerateTonProofMutation();
   const [checkTonProof] = useCheckTonProofMutation();
+
+
+  // using useEffect hook to ensure that both fetchTonProof and checkTonProof functions run every time wallet's value is changed. 
 
   useEffect(() => {
     const initializeTonConnect = async () => {
@@ -29,6 +32,7 @@ const NavbarRight = () => {
         state: 'loading',
       });
 
+      
       const tonProofPayload: any = await fetchTonProof(null);
       const tonProof: any = tonProofPayload?.data?.data;
 
