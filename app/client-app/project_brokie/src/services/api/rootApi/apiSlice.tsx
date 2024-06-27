@@ -6,8 +6,8 @@ export const apiSlice = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: baseUrl,
     prepareHeaders: (headers, { getState }) => {
-      headers.set('x-api-key', `2dba9e60af46ba99ac8058ffdbb23b0d`);
-      headers.set('x-client-id', `e4979660-06be-4f71-9171-24f9206730ab`);
+      headers.set('x-api-key', `${process.env.NEXT_PUBLIC_X_API_KEY}`);
+      headers.set('x-client-id', `${process.env.NEXT_PUBLIC_X_CLIENT_ID}`);
       return headers;
     },
   }),
