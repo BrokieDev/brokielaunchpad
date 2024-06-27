@@ -11,6 +11,10 @@
 
 # Tech stack
 
+* HTML
+
 * Vanilla CSS
 
 * TypeScript
+
+* RTK Query
