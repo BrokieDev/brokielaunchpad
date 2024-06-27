@@ -12,18 +12,20 @@ const ViewCoinToken = () => {
   return (
     <div className={styles.card}>
       <h3>Candle Tokenomics</h3>
-      <div className={styles.chartWrapper}>
-        <Chart></Chart>
-      </div>
-      <div className={styles.textWrapper}>
-        {chartData.map((c: any) => (
-          <div key={c.title}>
-            <span style={{ backgroundColor: `${c.color}` }}></span>
-            <span>
-              {c.title} ({c.value}%)
-            </span>
-          </div>
-        ))}
+      <div>
+        <div className={styles.chartWrapper}>
+          <Chart></Chart>
+        </div>
+        <div className={styles.textWrapper}>
+          {chartData.map((c: any) => (
+            <div key={c.title}>
+              <span style={{ backgroundColor: `${c.color}` }}></span>
+              <span>
+                {c.title} ({c.value}%)
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
