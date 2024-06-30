@@ -26,8 +26,8 @@ const Projects = () => {
         </div>
       </div>
       <div className={styles.cardsWrapper}>
-        {[...Array(5)].map((i: number) => (
-          <ProjectCard key={i}></ProjectCard>
+        {[...Array(5)].map((_:any, i: number) => (
+          <ProjectCard key={i} i={i}></ProjectCard>
         ))}
       </div>
     </div>

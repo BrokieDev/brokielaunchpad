@@ -23,8 +23,8 @@ const MyClaims = () => {
         </div>
       </div>
       <div className={styles.cardsWrapper}>
-        {[...Array(5)].map((i: number) => (
-          <ProjectCard key={i} pathname={pathname} ></ProjectCard>
+        {[...Array(5)].map((_:any, i: number) => (
+          <ProjectCard key={i} i={i} pathname={pathname} ></ProjectCard>
         ))}
       </div>
     </div>
