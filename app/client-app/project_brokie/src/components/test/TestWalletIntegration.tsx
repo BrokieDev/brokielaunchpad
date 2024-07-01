@@ -6,7 +6,9 @@ const TestWalletIntegration = () => {
   const wallet = useTonWallet();
   console.log(wallet);
 
-  const handleTest = async () => {};
+  const handleTest = async () => {
+    console.log('testing')
+  };
 
   return (
     <div>
